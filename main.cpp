@@ -2,6 +2,8 @@
 //Iker Guerrero
 //Juan Carlos Llanos
 
+//Para los casos de prueba por favor pegas los archivos txt en la terminal
+
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
@@ -132,14 +134,16 @@ int main() {
         root = insert_trie(root, keys[i]);
     }
 
-    //Search words in Trie
-    for (int i = 0; i < m; ++i) {
-        cout<<words[i]<<endl;
-        print_search(root,words[i]);
-    }
-
     //We print the TRIE
     print_trie(root);
     printf("\n");
+
+    //Search words in Trie
+    for (int i = 0; i < m; ++i) {
+        //cout<<words[i]<<endl;
+        print_search(root,words[i]);
+    }
+
+
     return 0;
 }
